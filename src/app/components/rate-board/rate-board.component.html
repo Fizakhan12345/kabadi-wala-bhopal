@@ -1,0 +1,64 @@
+<section id="rates" class="section board-section">
+  <div class="container">
+    <div class="board-head">
+      <div>
+        <p class="eyebrow">Rate Board</p>
+        <h2>Aaj Ka Bhaav</h2>
+      </div>
+      <div class="stamp-badge">
+        <span class="stamp-text">Updated Today</span>
+        <span class="stamp-date">{{ formattedDate }}</span>
+      </div>
+    </div>
+
+    <div class="tabs" role="tablist">
+      @for (cat of categories(); track cat.id) {
+        <button
+          role="tab"
+          class="tab"
+          [class.active]="activeId() === cat.id"
+          (click)="setActive(cat.id)"
+        >
+          {{ cat.titleEn }}
+          <span class="tab-hi">{{ cat.titleHi }}</span>
+        </button>
+      }
+    </div>
+
+    <div class="rate-grid">
+      @for (item of activeCategory().items; track item.nameEn) {
+        <div class="rate-card">
+          <div class="rate-card-top">
+            <p class="item-name">
+              {{ item.nameEn }}
+              @if (item.isLive) {
+                <span class="live-tag" title="Auto-updated from a live exchange price">Live</span>
+              }
+            </p>
+            <p class="item-name-hi">{{ item.nameHi }}</p>
+          </div>
+          <div class="rate-card-bottom">
+            <span class="price">₹{{ item.rate }}</span>
+            <span class="per">/ {{ item.unit }}</span>
+            <span
+              class="trend-badge"
+              [class.up]="item.trend === 'up'"
+              [class.down]="item.trend === 'down'"
+              [class.flat]="item.trend === 'flat'"
+            >
+              @if (item.trend === 'up') { ▲ Up }
+              @if (item.trend === 'down') { ▼ Down }
+              @if (item.trend === 'flat') { — Steady }
+            </span>
+          </div>
+        </div>
+      }
+    </div>
+
+    <p class="board-note">
+      Rates depend on quantity, quality and condition of scrap — final price confirmed at pickup.
+      <span class="live-tag inline" title="Auto-updated from a live exchange price">Live</span>-tagged
+      items (Copper, Brass, Aluminium) auto-update from exchange prices; the rest are updated daily by our team.
+    </p>
+  </div>
+</section>

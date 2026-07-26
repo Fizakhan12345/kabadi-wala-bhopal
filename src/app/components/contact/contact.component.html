@@ -1,0 +1,34 @@
+<section id="contact" class="section contact-section">
+  <div class="container contact-inner">
+    <div class="contact-copy">
+      <p class="eyebrow">Get Your Scrap Picked Up</p>
+      <h2>Aaj hi bulao, aaj hi bech do.</h2>
+      <p class="lead">
+        Call ya WhatsApp karo apna address aur scrap ka andaza — humari team same day
+        pickup ke saath pahunchegi.
+      </p>
+
+      <div class="cta-row">
+        <a [href]="site.phoneHref" class="btn btn-primary">{{ site.phone }}</a>
+        <a [href]="site.whatsappHref" target="_blank" rel="noopener" class="btn btn-ghost">WhatsApp Now</a>
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <dl>
+        <div>
+          <dt>Address</dt>
+          <dd>{{ site.address }}</dd>
+        </div>
+        <div>
+          <dt>Hours</dt>
+          <dd>{{ site.hours }}</dd>
+        </div>
+        <div>
+          <dt>Phone</dt>
+          <dd>{{ site.phone }}</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>

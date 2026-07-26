@@ -1,0 +1,23 @@
+<section id="why-us" class="section why-section">
+  <div class="container why-grid">
+    <div class="why-copy">
+      <p class="eyebrow">Why Us</p>
+      <h2>Bhopal ka bharosemand kabadi wala.</h2>
+      <ul class="points">
+        @for (p of points; track p) {
+          <li>{{ p }}</li>
+        }
+      </ul>
+    </div>
+
+    <div class="areas-card">
+      <p class="areas-label">Service Areas</p>
+      <div class="chips">
+        @for (area of site.areas; track area) {
+          <span class="chip">{{ area }}</span>
+        }
+      </div>
+      <p class="areas-note">Apna area list mein nahi dikha? Call karo, hum wahan bhi aate hain.</p>
+    </div>
+  </div>
+</section>

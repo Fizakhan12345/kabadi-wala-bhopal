@@ -1,0 +1,128 @@
+/* ==========================================================
+   Kabadi Wala Bhopal — Design Tokens
+   Direction: a working scrap-yard rate board, not a startup
+   landing page. Dark corrugated-shed palette + two metal
+   accents (copper + brass) + a mono "scale readout" numeral
+   face for every price on the page.
+   ========================================================== */
+
+:root {
+  /* --- color --- */
+  --bg: #f4efe3;
+  --bg-shed: #ede6d5;
+  --surface: #fffdf8;
+  --surface-2: #f1e9d9;
+  --line: rgba(28, 25, 20, 0.1);
+  --line-strong: rgba(28, 25, 20, 0.18);
+
+  --paper: #1c1914;
+  --paper-dim: #4d463a;
+  --paper-faint: #7d735f;
+
+  --copper: #a8551f;
+  --copper-dim: #7a3d16;
+  --brass: #a0790f;
+  --brass-dim: #745708;
+  --iron: #57676d;
+
+  --up: #4c7a33;
+  --down: #a13c28;
+
+  /* --- type --- */
+  --font-display: 'Oswald', sans-serif;
+  --font-body: 'Work Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* --- layout --- */
+  --radius: 3px;
+  --container: 1180px;
+  --shadow-lift: 0 20px 45px -25px rgba(0, 0, 0, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse at top left, rgba(192, 106, 52, 0.07), transparent 45%),
+    radial-gradient(ellipse at bottom right, rgba(207, 162, 39, 0.05), transparent 50%);
+  color: var(--paper);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0;
+  color: var(--paper);
+}
+
+p {
+  margin: 0;
+  color: var(--paper-dim);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--copper);
+}
+
+.section {
+  padding: 88px 0;
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding: 56px 0;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,17 @@
+<section id="services" class="section">
+  <div class="container">
+    <p class="eyebrow">How It Works</p>
+    <h2 class="title">One Call. Fair Weight. Cash In Hand.</h2>
+
+    <div class="grid">
+      @for (s of services; track s.title; let i = $index) {
+        <div class="card">
+          <span class="num">{{ (i + 1).toString().padStart(2, '0') }}</span>
+          <h3>{{ s.title }}</h3>
+          <p class="hi">{{ s.titleHi }}</p>
+          <p class="desc">{{ s.desc }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

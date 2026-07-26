@@ -1,0 +1,44 @@
+<section id="top" class="hero">
+  <div class="container hero-inner">
+    <p class="eyebrow">Bhopal · Doorstep Scrap Pickup</p>
+    <h1 class="headline">
+      Aaj ka bhaav dekho.<br />
+      <span>Kabadi ko ghar bulao.</span>
+    </h1>
+    <p class="sub">
+      Bhopal ke har mohalle mein iron, copper, brass, paper, plastic aur e-waste ka
+      sahi bazaar bhaav — roz update hota hai, ghar baithe check karo.
+    </p>
+
+    <div class="cta-row">
+      <a [href]="site.phoneHref" class="btn btn-primary">Call for Pickup</a>
+      <a [href]="site.whatsappHref" target="_blank" rel="noopener" class="btn btn-ghost">WhatsApp Bhaav Poochho</a>
+    </div>
+  </div>
+
+  <div class="ticker" aria-label="Today's headline scrap rates">
+    <div class="ticker-label">
+      <span class="stamp">Aaj Ka Bhaav</span>
+    </div>
+    <div class="ticker-track">
+      <div class="ticker-row">
+        @for (item of loopItems(); track $index) {
+          <span class="ticker-item">
+            <span class="name">{{ item.nameEn }}</span>
+            <span class="rate">₹{{ item.rate }}</span>
+            <span class="unit">/{{ item.unit }}</span>
+            <span
+              class="trend"
+              [class.up]="item.trend === 'up'"
+              [class.down]="item.trend === 'down'"
+            >
+              @if (item.trend === 'up') { ▲ }
+              @if (item.trend === 'down') { ▼ }
+              @if (item.trend === 'flat') { — }
+            </span>
+          </span>
+        }
+      </div>
+    </div>
+  </div>
+</section>

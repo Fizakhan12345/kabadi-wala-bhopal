@@ -1,0 +1,83 @@
+.why-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.why-copy h2 {
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+  margin-top: 8px;
+  max-width: 20ch;
+  text-transform: uppercase;
+}
+
+.points {
+  list-style: none;
+  margin: 32px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.points li {
+  position: relative;
+  padding-left: 26px;
+  color: var(--paper-dim);
+  font-size: 0.95rem;
+  line-height: 1.6;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 10px;
+    height: 2px;
+    background: var(--copper);
+  }
+}
+
+.areas-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.areas-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.chip {
+  font-size: 0.82rem;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  color: var(--paper-dim);
+}
+
+.areas-note {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: var(--paper-faint);
+}
+
+@media (max-width: 860px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
