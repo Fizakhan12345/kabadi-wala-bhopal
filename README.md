@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Kabadi Wala Bhopal — Website
 
 A responsive Angular website for a Bhopal scrap-dealer (kabadi) business, built to
@@ -98,3 +99,6 @@ src/app/
   before publishing.
 - Update the phone number and WhatsApp link in `site.data.ts` before going live
   — the sample number is a placeholder.
+=======
+# kabadi-wala-bhopal
+>>>>>>> 5c7864961f23fee161a23fef6d2cb47286363ee7
