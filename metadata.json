@@ -1,0 +1,6 @@
+{
+  "name": "Kabadiwala Bhopal",
+  "description": "Doorstep scrap pickup, recycling, and scrap dealer services in Bhopal. Instant cash for paper, metal, plastic, e-waste, and appliances.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
